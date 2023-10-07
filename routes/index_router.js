@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.use('/doctors', require('./doctors_router'));
-router.use('/patients', require('./patients_router'));
-router.use('/reports', require('./reports_router'));  
+router.use('/doctor', require('./doctor_router'));
+router.use('/patient', require('./patient_router'));
+router.use('/report', require('./report_router'));  
 
 module.exports = router;
