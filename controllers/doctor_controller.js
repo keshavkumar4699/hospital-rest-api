@@ -1,4 +1,5 @@
 const Doctor = require("../models/doctor");
+const jwt = require("jsonwebtoken");
 
 module.exports.register = async function (req, res) {
   try {
@@ -19,7 +20,23 @@ module.exports.register = async function (req, res) {
   }
 };
 
-module.exports.login = function (req, res) {
-  console.log(req.query.id);
-  console.log(req.params.id);
+module.exports.login = async function (req, res) {
+  try {
+    let doctor = await Doctor.find({
+      _id: req.query.id,
+    });
+    if (doctor.length != 0) {
+      let token = jwt.sign(
+        { name: doctor[0].name, id: String(doctor[0]._id) },
+        process.env.JWT_SECRET, //JWT_SECRET from evnvironment variable
+        { expiresIn: "24h" } //JWT expires in 24 hours
+      );
+      res.status(200).send(token);
+    } else {
+      res.status(404).send("Doctor not Found!");
+    }
+  } catch (err) {
+    console.log("Doctor donot Exist!", err);
+    res.status(500).send(err);
+  }
 };
