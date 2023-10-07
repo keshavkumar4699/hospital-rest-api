@@ -14,9 +14,6 @@ const reportSchema = new mongoose.Schema(
       type: String,
       enum: ['Negative', 'Travelled-Quarantine', 'Symptoms-Quarantine', 'Positive-Admit'],
       default: 'Negetive'
-    },
-    date: {
-      type: Date,
     }
   },
   {

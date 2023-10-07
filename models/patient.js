@@ -9,10 +9,6 @@ const patientSchema  = new mongoose.Schema({
     unique: true,
     require: true
   },
-  email: {
-    type: String,
-    unique: true,
-  },
   reports: [
     {
       type: mongoose.Schema.Types.ObjectId,
