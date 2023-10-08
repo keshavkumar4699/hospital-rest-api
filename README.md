@@ -54,31 +54,31 @@ Once you have the application up and running, you can run there APIs in post man
   - password
   - email
 
-```/doctors/register```
+```/doctor/register```
 
 - Login Doctor with query params
   - id
   
-```/doctors/login```
+```/doctor/login```
 
 - Register Patient with fields
   - name
   - phone
   
-```/patients/register```
+```/patient/register```
 
 - Create patient report with query param
   - doctor id
   
-`/patients/:id/create_report`
+```/patient/:id/create_report```
 
 - List all reports of patient
   
-```/patients/:id/all_reports```
+```/patient/:id/all_reports```
 
 -List reports by their status
   
-```/reports/:status```
+```/report/:status```
 
 ## folder structure
 

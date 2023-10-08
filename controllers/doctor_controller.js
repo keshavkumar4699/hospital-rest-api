@@ -12,8 +12,8 @@ module.exports.register = async function (req, res) {
     if (doctors.length != 0) { //if doctor exists
       res.status(409).send("Doctor exists!");
     } else { //if doctor is not found
-      await Doctor.create(req.body); //create doctor with passed parameters
-      res.status(200).send("Doctor created!");
+      const doctor = await Doctor.create(req.body); //create doctor with passed parameters
+      res.status(200).send(doctor);
     }
   } catch (err) {
     res.status(500).send(err);//if error encountered
