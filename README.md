@@ -24,22 +24,22 @@ Follow given steps to run this project on your local machine
 
 1. clone this repository
 
-`$ git clone https://github.com/keshavkumar4699/hospital-rest-api`
+```$ git clone https://github.com/keshavkumar4699/hospital-rest-api```
 
 2. Install required dependencies
 
-`$ npm install`
+```$ npm install```
 
 3. Set port env variables
 
-`$ set PORT=<port_number>`
-`$ set JWT_SECRET=<jwt_secret_key>`
+```$ set PORT=<port_number>```
+```$ set JWT_SECRET=<jwt_secret_key>```
 
 4. Start application
-`$ npm start`
+```$ npm start```
 
 5. Open application in browser
-`$ http://localhost:<PORT>`
+```$ http://localhost:<PORT>```
 
 ## Usage
 
@@ -50,26 +50,32 @@ Once you have the application up and running, you can run there APIs in post man
   - phone
   - password
   - email
-  `/doctors/register`
+
+```/doctors/register```
 
 - Login Doctor with query params
   - id
-  `/doctors/login`
+  
+```/doctors/login```
 
 - Register Patient with fields
   - name
   - phone
-  `/patients/register`
+  
+```/patients/register```
 
 - Create patient report with query param
   - doctor id
-  `/patients/:id/create_report`
+  
+`/patients/:id/create_report`
 
 - List all reports of patient
-  `/patients/:id/all_reports`
+  
+```/patients/:id/all_reports```
 
 -List reports by their status
-  `/reports/:status`
+  
+```/reports/:status```
 
 ## folder structure
 
