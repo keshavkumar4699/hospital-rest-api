@@ -33,12 +33,15 @@ Follow given steps to run this project on your local machine
 3. Set port env variables
 
 ```$ set PORT=<port_number>```
+
 ```$ set JWT_SECRET=<jwt_secret_key>```
 
 4. Start application
+
 ```$ npm start```
 
 5. Open application in browser
+
 ```$ http://localhost:<PORT>```
 
 ## Usage
