@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 //connect to database
 async function main() {
-    const db = await mongoose.connect(`mongodb://127.0.0.1:27017/hospital`);
+    const db = await mongoose.connect(`mongodb+srv://kumarkeshav4699:ORpSNGz3ZpVYspah@beginnercluster.k6gk8p2.mongodb.net/?retryWrites=true`);
     module.exports = db;
 }
 
