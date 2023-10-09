@@ -20,6 +20,7 @@ module.exports.register = async function (req, res) {
   }
 };
 
+process.env.JWT_SECRET = "abc@123";
 module.exports.login = async function (req, res) {
   try {
     let doctor = await Doctor.find({
